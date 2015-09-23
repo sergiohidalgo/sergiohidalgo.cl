@@ -12,7 +12,6 @@ node_modules
 # Ignore config
 local-config.php
 
-
 # Operating system files
 .Spotlight-V100
 .Trashes
