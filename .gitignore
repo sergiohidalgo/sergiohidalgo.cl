@@ -35,8 +35,3 @@ contenido/cache/
 contenido/uploads/
 contenido/upgrade/
 contenido/wp-cache-config.php
-
-#Desarrollo
-contenido/plugins/sinc_database/*
-respaldo.php
-
