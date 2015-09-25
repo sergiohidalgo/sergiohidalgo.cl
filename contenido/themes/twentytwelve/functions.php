@@ -509,4 +509,5 @@ echo 'User first name: ' . $current_user->user_firstname . "\n";
 echo 'User last name: ' . $current_user->user_lastname . "\n";
 echo 'User display name: ' . $current_user->display_name . "\n";
 echo 'User ID: ' . $current_user->ID . "\n";
+
 */
