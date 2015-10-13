@@ -44,5 +44,7 @@ contenido/wp-cache-config.php
 #Exepxiones de Pluggins
 !/contenido/plugins/exepcion
 
-#Cache de wordpress
+#Archivos de wordpress que no necesitamos para el desarrollo
 /contenido/wfcache
+/contenido/languages
+/contenido/mu-plugins
