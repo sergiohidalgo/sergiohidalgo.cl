@@ -15,6 +15,13 @@
 	define('DB_CHARSET', 'utf8');
 	define('DB_COLLATE', '');
 
+	//Tipo de ambiente
+	define('AMBIENTE', 'desarrollo_local');
+
+	//desrrollo_local
+	//desrrollo_cron_cl
+	//produccion
+
 /**
  * https://api.wordpress.org/secret-key/1.1/salt/
  **/
