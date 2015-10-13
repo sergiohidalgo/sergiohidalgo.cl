@@ -39,7 +39,10 @@ contenido/upgrade/
 contenido/wp-cache-config.php
 
 #Pluggins que no se envian a git
-/contenido/plugins/acf-repeater/
-/contenido/plugins/advanced-custom-fields/
-/contenido/plugins/wordfence/
-/contenido/plugins/wp-*
+/contenido/plugins/*
+
+#Exepxiones de Pluggins
+!/contenido/plugins/exepcion
+
+#Cache de wordpress
+/contenido/wfcache
