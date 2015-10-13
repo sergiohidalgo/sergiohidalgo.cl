@@ -23,6 +23,8 @@ Thumbs.db
 # Vagrant
 .vagrant
 
+*.bak
+
 # WordPress + popular plugin generated — adapted from:
 # https://github.com/github/gitignore/blob/master/WordPress.gitignore
 sitemap.xml
