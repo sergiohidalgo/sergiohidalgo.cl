@@ -8,16 +8,30 @@ var gulp = 			require('gulp'),
 	sourcemaps = 	require('gulp-sourcemaps'),
 	uglify =		require('gulp-uglifyjs');
 
+// Bower comand: bower list -p
+var JS_paths = [
+	'bower_components/bootstrap/dist/js/bootstrap.js',
+	'../source/js/*.js',
+];
+
+var SASS_paths = [
+	'../source/estilos/sass/*.scss'
+]
+
+var CSS_paths = [
+	'../source/estilos/*/*.css'
+]
+
 //Compilar sass
 gulp.task('sass', function () {
-	gulp.src('../source/estilos/sass/*.scss')
+	gulp.src(SASS_paths)
 	.pipe(sass.sync().on('error', sass.logError))
 	.pipe(gulp.dest('../source/estilos/css-to-sass'))
 });
 
 //Unificar y minificar archivos compilados oir SASS
 gulp.task('unificar', function () {
-	return gulp.src('../source/estilos/*/*.css')
+	return gulp.src(CSS_paths)
 	.pipe(concatCss("style.css"))
 	.pipe(sourcemaps.init())
 	.pipe(minifyCSS({'compatibility':'ie8'}))
@@ -32,7 +46,7 @@ gulp.task('sass:watch', function () {
 
 //Contactenando javascript
 gulp.task('scripts', function() {
-	gulp.src('../source/js/*.js')
+	gulp.src(JS_paths)
 	.pipe(uglify('script.js', {'outSourceMap': true}))
 	.pipe(gulp.dest('../'))
 });
