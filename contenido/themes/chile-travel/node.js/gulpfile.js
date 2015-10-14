@@ -10,28 +10,20 @@ var gulp = 			require('gulp'),
 
 // Bower comand: bower list -p
 var JS_paths = [
-	'bower_components/bootstrap/dist/js/bootstrap.js',
+	'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
 	'../source/js/*.js',
 ];
 
-var SASS_paths = [
-	'../source/estilos/sass/*.scss'
-]
-
-var CSS_paths = [
-	'../source/estilos/*/*.css'
-]
-
 //Compilar sass
 gulp.task('sass', function () {
-	gulp.src(SASS_paths)
+	gulp.src('../source/estilos/sass/*.scss')
 	.pipe(sass.sync().on('error', sass.logError))
 	.pipe(gulp.dest('../source/estilos/css-to-sass'))
 });
 
 //Unificar y minificar archivos compilados oir SASS
 gulp.task('unificar', function () {
-	return gulp.src(CSS_paths)
+	return gulp.src('../source/estilos/css/unificar.css')
 	.pipe(concatCss("style.css"))
 	.pipe(sourcemaps.init())
 	.pipe(minifyCSS({'compatibility':'ie8'}))
@@ -57,5 +49,5 @@ gulp.task('js:watch', function () {
 });
 
 //Ejecutar las tareas
-gulp.task('build', ['sass','unificar', 'scripts']);
+gulp.task('build', ['sass','unificar','scripts']);
 gulp.task('default', ['build']);
