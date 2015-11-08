@@ -42,11 +42,10 @@ contenido/wp-cache-config.php
 /contenido/plugins/*
 
 #Exepxiones de Pluggins
-!/contenido/plugins/exepcion
+!/contenido/plugins/index.php
 
 #Archivos de wordpress que no necesitamos para el desarrollo
 /contenido/wfcache
-/contenido/languages
 /contenido/mu-plugins
 
 #Recursos para compilar
